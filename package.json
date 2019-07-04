@@ -5,7 +5,9 @@
   "version": "0.1.0",
   "scripts": {
     "start": "cross-env NODE_ENV=development node build/dev.js",
-    "build": "cross-env NODE_ENV=production node build/prod.js"
+    "build": "cross-env NODE_ENV=production node build/prod.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,8 @@
     "react-router": "^2.7.0",
     "react-router-redux": "^4.0.5",
     "redux": "^3.5.2",
-    "redux-thunk": "^2.1.0"
+    "redux-thunk": "^2.1.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
@@ -70,5 +73,6 @@
     "webpack-hot-middleware": "^2.6.0",
     "why-did-you-update": "0.0.8"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
